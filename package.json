@@ -7,6 +7,7 @@
     "get-team-files": "node ./scripts/get-team-files.js",
     "get-project-files": "node ./scripts/get-project-files.js",
     "start": "playwright test",
+    "ui": "playwright test --ui",
     "retry": "playwright test --last-failed",
     "dry-run": "playwright test --list",
     "report": "playwright show-report"

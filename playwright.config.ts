@@ -20,7 +20,11 @@ export default defineConfig({
     },
     {
       name: "download",
-      use: { ...devices["Desktop Chrome"], storageState: ".auth/user.json" },
+      use: {
+        ...devices["Desktop Chrome"],
+        storageState: ".auth/user.json",
+        baseURL: 'https://www.figma.com/'
+      },
       dependencies: ["setup"],
     },
   ],

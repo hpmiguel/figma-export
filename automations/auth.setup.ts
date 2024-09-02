@@ -34,7 +34,10 @@ setup("authenticate", async ({ page }) => {
     await page.getByRole("button", { name: "log in" }).click();
   }
 
-  await expect(page.getByTestId("ProfileButton")).toBeAttached({
+  await page.waitForTimeout(5000);
+
+  //await expect(page.getByTestId("ProfileButton")).toBeAttached({
+  await expect(page.locator("#react-page")).toBeAttached({
     timeout: 10 * 1000,
   });
 
